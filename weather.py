@@ -25,7 +25,10 @@ weather = WEATHER_CODES.get(
 weather_code,
 "정보 없음"
 )
-print("===== 오늘 날씨 =====")
+print("=" * 40)
+print("🌤 천안 날씨 리포트")
+print("=" * 40)
+print("\n📅 오늘")
 print(f"날씨 : {weather}")
 print(f"기온 : {data['current']['temperature_2m']}℃")
 tomorrow_code = data["daily"]["weather_code"][1]
@@ -33,7 +36,8 @@ tomorrow_weather = WEATHER_CODES.get(
 tomorrow_code,
 "정보 없음"
 )
-print("\n===== 내일 날씨 =====")
+print("\n📅 내일")
 print(f"날씨 : {tomorrow_weather}")
 print(f"최저 기온 : {data['daily']['temperature_2m_min'][1]}℃")
 print(f"최고 기온 : {data['daily']['temperature_2m_max'][1]}℃")
+print("\n프로그램 종료")
